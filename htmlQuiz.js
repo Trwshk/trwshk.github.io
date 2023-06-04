@@ -1,83 +1,83 @@
 const htmlQuizData = [
   {
-    question: "Q1. What does HTML stand for?",
-    a: "Hyper Text Markup Language",
-    b: "Hyperlinks and Text Markup Language",
-    c: "Home Tool Markup Language",
-    d: "Hyperlink Text Marker Language",
-    ans: "ans-1",
+    question: "Q1. What does DOM stand for?",
+    a: "Document Object Model",
+    b: "Data Object Model",
+    c: "Document Order Model",
+    d: "Dynamic Object Model",
+    ans: "html-ans-1",
   },
   {
-    question: "Q2. Which tag is used to define an unordered list?",
-    a: "<ul>",
-    b: "<ol>",
-    c: "<li>",
-    d: "<dl>",
-    ans: "ans-1",
+    question: "Q2. Which method is used to add a new element to the end of an array?",
+    a: "push()",
+    b: "join()",
+    c: "concat()",
+    d: "slice()",
+    ans: "html-ans-1",
   },
   {
-    question: "Q3. Which tag is used to define a table row?",
-    a: "<td>",
-    b: "<tr>",
-    c: "<th>",
-    d: "<table>",
-    ans: "ans-2",
+    question: "Q3. Which operator is used to concatenate strings in JavaScript?",
+    a: "+",
+    b: "-",
+    c: "*",
+    d: "/",
+    ans: "html-ans-1",
   },
   {
-    question: "Q4. Which tag is used to create a hyperlink?",
-    a: "<a>",
-    b: "<h1>",
-    c: "<p>",
-    d: "<div>",
-    ans: "ans-1",
+    question: "Q4. What is the correct way to write an if statement in JavaScript?",
+    a: "if (x === 5)",
+    b: "if x = 5",
+    c: "if x == 5",
+    d: "if x =! 5",
+    ans: "html-ans-1",
   },
   {
-    question: "Q5. Which attribute is used to specify an image source in HTML?",
-    a: "src",
-    b: "href",
-    c: "img",
-    d: "link",
-    ans: "ans-1",
+    question: "Q5. Which method is used to remove the last element from an array in JavaScript?",
+    a: "pop()",
+    b: "shift()",
+    c: "splice()",
+    d: "slice()",
+    ans: "html-ans-1",
   },
   {
-    question: "Q6. Which tag is used to define a heading?",
-    a: "<h1>",
-    b: "<div>",
-    c: "<p>",
-    d: "<span>",
-    ans: "ans-1",
+    question: "Q6. Which operator is used to assign a value to a variable in JavaScript?",
+    a: "=",
+    b: "==",
+    c: "===",
+    d: "!=",
+    ans: "html-ans-1",
   },
   {
-    question: "Q7. Which tag is used to create a line break in HTML?",
-    a: "<br>",
-    b: "<hr>",
-    c: "<lb>",
-    d: "<ln>",
-    ans: "ans-1",
+    question: "Q7. What is the result of the expression '3' + 2 in JavaScript?",
+    a: "32",
+    b: "5",
+    c: "7",
+    d: "undefined",
+    ans: "html-ans-1",
   },
   {
-    question: "Q8. Which tag is used to define a paragraph?",
-    a: "<p>",
-    b: "<span>",
-    c: "<div>",
-    d: "<h1>",
-    ans: "ans-1",
+    question: "Q8. Which keyword is used to declare a variable in JavaScript?",
+    a: "var",
+    b: "let",
+    c: "const",
+    d: "int",
+    ans: "html-ans-1",
   },
   {
-    question: "Q9. Which tag is used to define a hyperlink?",
-    a: "<a>",
-    b: "<link>",
-    c: "<h1>",
-    d: "<p>",
-    ans: "ans-1",
+    question: "Q9. Which method is used to convert a string to uppercase in JavaScript?",
+    a: "toUpperCase()",
+    b: "toLowerCase()",
+    c: "trim()",
+    d: "concat()",
+    ans: "html-ans-1",
   },
   {
-    question: "Q10. Which tag is used to define an input field in HTML?",
-    a: "<input>",
-    b: "<form>",
-    c: "<select>",
-    d: "<button>",
-    ans: "ans-1",
+    question: "Q10. Which function is used to output a message to the console in JavaScript?",
+    a: "log()",
+    b: "print()",
+    c: "alert()",
+    d: "message()",
+    ans: "html-ans-1",
   },
 ];
 
@@ -93,7 +93,7 @@ const htmlShowScore = document.querySelector("#html-showScore");
 let htmlQuestionCount = 0;
 let htmlScore = 0;
 
-const loadHtmlQuestion = () => {
+const loadhtmlQuestion = () => {
   const htmlQuestionList = htmlQuizData[htmlQuestionCount];
 
   htmlQuestion.innerText = htmlQuestionList.question;
@@ -103,10 +103,10 @@ const loadHtmlQuestion = () => {
   htmlOption4.innerText = htmlQuestionList.d;
 };
 
-loadHtmlQuestion();
+loadhtmlQuestion();
 
-function getHtmlAnswer() {
-  let answer;
+function gethtmlAnswer() {
+  let answer = null;
   htmlAnswers.forEach((currAns) => {
     if (currAns.checked) {
       answer = currAns.id;
@@ -115,29 +115,39 @@ function getHtmlAnswer() {
   return answer;
 }
 
-htmlSubmit.addEventListener("click", () => {
-  const checkedHtmlAnswer = getHtmlAnswer();
+const deselectAllhtml = () => {
+  htmlAnswers.forEach((curAnsElem) => (curAnsElem.checked = false));
+};
 
-  if (checkedHtmlAnswer != null) {
-    if (checkedHtmlAnswer === htmlQuizData[htmlQuestionCount].ans) {
+htmlSubmit.addEventListener("click", () => {
+  const checkedhtmlAnswer = gethtmlAnswer();
+  console.log("click")
+
+  if (checkedhtmlAnswer != null) {
+    if (checkedhtmlAnswer === htmlQuizData[htmlQuestionCount].ans) {
       htmlScore++;
     }
 
+    deselectAllhtml();
     htmlQuestionCount++;
 
     if (htmlQuestionCount < htmlQuizData.length) {
-      loadHtmlQuestion();
+      loadhtmlQuestion();
     } else {
       htmlShowScore.innerHTML = `
         <div class="btn-container">
-          <div class="fade-in-text-2"><h1 style="text-align:center"> You scored ${htmlScore}/${htmlQuizData.length}</h1></div>
+          <div class="fade-in-text-2">
+            <h1 style="text-align: center">You scored ${htmlScore}/${htmlQuizData.length}</h1>
+          </div>
         </div>
         <div class="btn-container">
-          <button class="btn btn-primary" onClick="location.reload()"><span class="btn-main-text">Try again</span></button>
+          <button class="btn btn-primary" onClick="location.reload()">
+            <span class="btn-main-text">Try again</span>
+          </button>
         </div>
       `;
-      htmlShowScore.classList.remove('scoreArea');
-      htmlSubmit.style.display = 'none';
+      htmlShowScore.classList.remove("scoreArea");
+      htmlSubmit.style.display = "none";
 
       const htmlQuestionArea = document.querySelector(".html-questions");
       htmlQuestionArea.style.display = "none";

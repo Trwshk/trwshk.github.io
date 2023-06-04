@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
   <body>
-    <script src="main.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <!--BARA DE NAVIGARE-->
 
@@ -190,13 +189,102 @@
         </div>
 
         <!-- HTML LEARN PAGE -->
+
+        <div class="page tabs" data-page="js_learn_page">
+          <div class="mainpage">
+            <div class="main-dev">
+              <div class="inner-section">
+                <div class="accordion" id="accordionExample">
+
+                  <script>
+                    const htmlSections = [
+                                      {
+                                        title: "Introduction to HTML",
+                                        contentFile: "intro.html"
+                                      },
+                                      {
+                                        title: "HTML Tags and Structure",
+                                        contentFile: "data-variables.html"
+                                      },
+                                      {
+                                        title: "Working with Text and Headings in HTML",
+                                        contentFile: "operators-expressions.html"
+                                      },
+                                      {
+                                        title: "Creating Lists and Tables in HTML",
+                                        contentFile: "control-loops.html"
+                                      },
+                                      {
+                                        title: "Formatting and Styling HTML with CSS",
+                                        contentFile: "functions.html"
+                                      },
+                                      {
+                                        title: "Adding Images and Links in HTML",
+                                        contentFile: "arrays_objects.html"
+                                      },
+                                      {
+                                        title: "Understanding Forms and Input Fields in HTML",
+                                        contentFile: "dom_manipulation.html"
+                                      },
+                                      {
+                                        title: "HTML Semantics and Accessibility",
+                                        contentFile: "css_js.html"
+                                      }
+                                    ];
+                
+                    for (let i = 0; i < htmlSections.length; i++) {
+                    const section = htmlSections[i];
+                    const headerId = `heading${i + 1}`;
+                    const contentId = `collapse${i + 1}`;
+
+                    fetch(`learn/javascript/${section.contentFile}`)
+                      .then(response => response.text())
+                      .then(content => {
+                        document.querySelector(`#${contentId} .accordion-body`).innerHTML = content;
+                      });
+
+                    document.write(`
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="${headerId}">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#${contentId}"
+                            aria-expanded="false"
+                            aria-controls="${contentId}"
+                          >
+                            ${section.title}
+                          </button>
+                        </h2>
+                        <div
+                          id="${contentId}"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="${headerId}"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div class="accordion-body">
+                            Loading...
+                          </div>
+                        </div>
+                      </div>
+                    `);
+                  }
+                  </script>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- HTML TRY PAGE -->
         
         <div class="page tabs" data-page="html_try_page">
           <div class="main-dev">
           <div class="inner-section">
           <div class="container mt-4">
-            <h1 class="text-center mb-4">Try JavaScript</h1>
+            <h1 class="text-center mb-4">Try HTML</h1>
             <div id="html_exercises"></div>
           </div>
         </div>
@@ -211,20 +299,20 @@
               <div class="html-questions">
               <h2 class="html-question">Question came here</h2>
                 <div class="btn-radio">
-                  <input type="radio" name="answer" id="ans-1" class="btn-check html-answer" autocomplete="off"/>
-                  <label for="ans-1" id="html-option-1" class="btn btn-secondary">Option 1</label>
+                  <input type="radio" name="answer" id="html-ans-1" class="btn-check html-answer" autocomplete="off"/>
+                  <label for="html-ans-1" id="html-option-1" class="btn btn-secondary">Option 1</label>
                 </div>
                 <div class="btn-radio">
-                  <input type="radio" name="answer" id="ans-2" class="btn-check html-answer" autocomplete="off"/>
-                  <label for="ans-2" id="html-option-2" class="btn btn-secondary">Option 2 </label>
+                  <input type="radio" name="answer" id="html-ans-2" class="btn-check html-answer" autocomplete="off"/>
+                  <label for="html-ans-2" id="html-option-2" class="btn btn-secondary">Option 2 </label>
                 </div>
                 <div class="btn-radio">
-                  <input type="radio" name="answer" id="ans-3" class="btn-check html-answer" autocomplete="off"/>
-                  <label for="ans-3" id="html-option-3" class="btn btn-secondary">Option 3 </label>
+                  <input type="radio" name="answer" id="html-ans-3" class="btn-check html-answer" autocomplete="off"/>
+                  <label for="html-ans-3" id="html-option-3" class="btn btn-secondary">Option 3 </label>
                 </div>
                 <div class="btn-radio">
-                  <input type="radio" name="answer" id="ans-4"class="btn-check html-answer" autocomplete="off"/>
-                  <label for="ans-4" id="html-option-4" class="btn btn-secondary">Option 4 </label>
+                  <input type="radio" name="answer" id="html-ans-4"class="btn-check html-answer" autocomplete="off"/>
+                  <label for="html-ans-4" id="html-option-4" class="btn btn-secondary">Option 4 </label>
                 </div>
               </div>
               <div class="btn-container">
@@ -286,13 +374,102 @@
         </div>
 
         <!-- CSS LEARN PAGE -->
+
+        <div class="page tabs" data-page="js_learn_page">
+          <div class="mainpage">
+            <div class="main-dev">
+              <div class="inner-section">
+                <div class="accordion" id="accordionExample">
+
+                  <script>
+                    const cssSections = [
+                                      {
+                                        title: "Introduction to CSS",
+                                        contentFile: "intro.html"
+                                      },
+                                      {
+                                        title: "CSS Selectors and Styling Basics",
+                                        contentFile: "data-variables.html"
+                                      },
+                                      {
+                                        title: "Working with Text and Fonts in CSS",
+                                        contentFile: "operators-expressions.html"
+                                      },
+                                      {
+                                        title: "Managing Colors and Backgrounds with CSS",
+                                        contentFile: "control-loops.html"
+                                      },
+                                      {
+                                        title: "Box Model and Layout in CSS",
+                                        contentFile: "functions.html"
+                                      },
+                                      {
+                                        title: "CSS Flexbox and Grid Systems",
+                                        contentFile: "arrays_objects.html"
+                                      },
+                                      {
+                                        title: "CSS Transitions and Animations",
+                                        contentFile: "dom_manipulation.html"
+                                      },
+                                      {
+                                        title: "Responsive Design and Media Queries in CSS",
+                                        contentFile: "css_js.html"
+                                      }
+                                    ];
+                
+                    for (let i = 0; i < cssSections.length; i++) {
+                    const section = cssSections[i];
+                    const headerId = `heading${i + 1}`;
+                    const contentId = `collapse${i + 1}`;
+
+                    fetch(`learn/css/${section.contentFile}`)
+                      .then(response => response.text())
+                      .then(content => {
+                        document.querySelector(`#${contentId} .accordion-body`).innerHTML = content;
+                      });
+
+                    document.write(`
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="${headerId}">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#${contentId}"
+                            aria-expanded="false"
+                            aria-controls="${contentId}"
+                          >
+                            ${section.title}
+                          </button>
+                        </h2>
+                        <div
+                          id="${contentId}"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="${headerId}"
+                          data-bs-parent="#accordionExample"
+                        >
+                          <div class="accordion-body">
+                            Loading...
+                          </div>
+                        </div>
+                      </div>
+                    `);
+                  }
+                  </script>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- CSS TRY PAGE -->
 
         <div class="page tabs" data-page="css_try_page">
           <div class="main-dev">
           <div class="inner-section">
           <div class="container mt-4">
-            <h1 class="text-center mb-4">Try JavaScript</h1>
+            <h1 class="text-center mb-4">Try CSS</h1>
             <div id="css_exercises"></div>
           </div>
         </div>
@@ -307,20 +484,20 @@
               <div class="css-questions">
               <h2 class="css-question">Question came here</h2>
                 <div class="btn-radio">
-                  <input type="radio" name="answer" id="ans-1" class="btn-check css-answer" autocomplete="off"/>
-                  <label for="ans-1" id="css-option-1" class="btn btn-secondary">Option 1</label>
+                  <input type="radio" name="answer" id="css-ans-1" class="btn-check css-answer" autocomplete="off"/>
+                  <label for="css-ans-1" id="css-option-1" class="btn btn-secondary">Option 1</label>
                 </div>
                 <div class="btn-radio">
-                  <input type="radio" name="answer" id="ans-2" class="btn-check css-answer" autocomplete="off"/>
-                  <label for="ans-2" id="css-option-2" class="btn btn-secondary">Option 2 </label>
+                  <input type="radio" name="answer" id="css-ans-2" class="btn-check css-answer" autocomplete="off"/>
+                  <label for="css-ans-2" id="css-option-2" class="btn btn-secondary">Option 2 </label>
                 </div>
                 <div class="btn-radio">
-                  <input type="radio" name="answer" id="ans-3" class="btn-check css-answer" autocomplete="off"/>
-                  <label for="ans-3" id="css-option-3" class="btn btn-secondary">Option 3 </label>
+                  <input type="radio" name="answer" id="css-ans-3" class="btn-check css-answer" autocomplete="off"/>
+                  <label for="css-ans-3" id="css-option-3" class="btn btn-secondary">Option 3 </label>
                 </div>
                 <div class="btn-radio">
-                  <input type="radio" name="answer" id="ans-4"class="btn-check css-answer" autocomplete="off"/>
-                  <label for="ans-4" id="css-option-4" class="btn btn-secondary">Option 4 </label>
+                  <input type="radio" name="answer" id="css-ans-4"class="btn-check css-answer" autocomplete="off"/>
+                  <label for="css-ans-4" id="css-option-4" class="btn btn-secondary">Option 4 </label>
                 </div>
               </div>
               <div class="btn-container">
@@ -390,7 +567,7 @@
                 <div class="accordion" id="accordionExample">
 
                   <script>
-                    const sections = [
+                    const jsSections = [
                                       {
                                         title: "Introduction to JavaScript!!!",
                                         contentFile: "intro.html"
@@ -425,12 +602,12 @@
                                       }
                                     ];
                 
-                    for (let i = 0; i < sections.length; i++) {
-                    const section = sections[i];
+                    for (let i = 0; i < jsSections.length; i++) {
+                    const section = jsSections[i];
                     const headerId = `heading${i + 1}`;
                     const contentId = `collapse${i + 1}`;
 
-                    fetch(`sections/${section.contentFile}`)
+                    fetch(`learn/javascript/${section.contentFile}`)
                       .then(response => response.text())
                       .then(content => {
                         document.querySelector(`#${contentId} .accordion-body`).innerHTML = content;
@@ -491,20 +668,20 @@
               <div class="js-questions">
               <h2 class="js-question">Question came here</h2>
                 <div class="btn-radio">
-                  <input type="radio" name="answer" id="ans-1" class="btn-check js-answer" autocomplete="off"/>
-                  <label for="ans-1" id="js-option-1" class="btn btn-secondary">Option 1</label>
+                  <input type="radio" name="answer" id="js-ans-1" class="btn-check js-answer" autocomplete="off"/>
+                  <label for="js-ans-1" id="js-option-1" class="btn btn-secondary">Option 1</label>
                 </div>
                 <div class="btn-radio">
-                  <input type="radio" name="answer" id="ans-2" class="btn-check js-answer" autocomplete="off"/>
-                  <label for="ans-2" id="js-option-2" class="btn btn-secondary">Option 2 </label>
+                  <input type="radio" name="answer" id="js-ans-2" class="btn-check js-answer" autocomplete="off"/>
+                  <label for="js-ans-2" id="js-option-2" class="btn btn-secondary">Option 2 </label>
                 </div>
                 <div class="btn-radio">
-                  <input type="radio" name="answer" id="ans-3" class="btn-check js-answer" autocomplete="off"/>
-                  <label for="ans-3" id="js-option-3" class="btn btn-secondary">Option 3 </label>
+                  <input type="radio" name="answer" id="js-ans-3" class="btn-check js-answer" autocomplete="off"/>
+                  <label for="js-ans-3" id="js-option-3" class="btn btn-secondary">Option 3 </label>
                 </div>
                 <div class="btn-radio">
-                  <input type="radio" name="answer" id="ans-4"class="btn-check js-answer" autocomplete="off"/>
-                  <label for="ans-4" id="js-option-4" class="btn btn-secondary">Option 4 </label>
+                  <input type="radio" name="answer" id="js-ans-4"class="btn-check js-answer" autocomplete="off"/>
+                  <label for="js-ans-4" id="js-option-4" class="btn btn-secondary">Option 4 </label>
                 </div>
               </div>
               <div class="btn-container">
@@ -517,6 +694,8 @@
 
       </section>
     </section>
+    
+    <script src="main.js"></script>
     <script src="try.js"></script>
     <script src="htmlQuiz.js"></script>
     <script src="cssQuiz.js"></script>

@@ -5,7 +5,7 @@ const cssQuizData = [
     b: "Colorful Style Sheets",
     c: "Computer Style Sheets",
     d: "Creative Style Sheets",
-    ans: "ans-1",
+    ans: "css-ans-1",
   },
   {
     question: "Q2. Which property is used to change the font color of an element?",
@@ -13,7 +13,7 @@ const cssQuizData = [
     b: "color",
     c: "font-size",
     d: "text-align",
-    ans: "ans-2",
+    ans: "css-ans-2",
   },
   {
     question: "Q3. Which property is used to add spacing between letters?",
@@ -21,7 +21,7 @@ const cssQuizData = [
     b: "padding",
     c: "line-height",
     d: "letter-spacing",
-    ans: "ans-4",
+    ans: "css-ans-4",
   },
   {
     question: "Q4. Which property is used to make an element's text bold?",
@@ -29,7 +29,7 @@ const cssQuizData = [
     b: "font-weight",
     c: "text-decoration",
     d: "text-transform",
-    ans: "ans-2",
+    ans: "css-ans-2",
   },
   {
     question: "Q5. Which property is used to control the transparency of an element?",
@@ -37,7 +37,7 @@ const cssQuizData = [
     b: "visibility",
     c: "display",
     d: "background-color",
-    ans: "ans-1",
+    ans: "css-ans-1",
   },
   {
     question: "Q6. Which property is used to align text horizontally?",
@@ -45,7 +45,7 @@ const cssQuizData = [
     b: "text-decoration",
     c: "text-transform",
     d: "text-indent",
-    ans: "ans-1",
+    ans: "css-ans-1",
   },
   {
     question: "Q7. Which property is used to add a border to an element?",
@@ -53,7 +53,7 @@ const cssQuizData = [
     b: "border-style",
     c: "border-width",
     d: "border",
-    ans: "ans-4",
+    ans: "css-ans-4",
   },
   {
     question: "Q8. Which property is used to control the spacing between lines of text?",
@@ -61,7 +61,7 @@ const cssQuizData = [
     b: "margin",
     c: "padding",
     d: "font-size",
-    ans: "ans-1",
+    ans: "css-ans-1",
   },
   {
     question: "Q9. Which property is used to control the order of elements in a flex container?",
@@ -69,7 +69,7 @@ const cssQuizData = [
     b: "align-items",
     c: "order",
     d: "flex-direction",
-    ans: "ans-3",
+    ans: "css-ans-3",
   },
   {
     question: "Q10. Which property is used to make an element's text italic?",
@@ -77,7 +77,7 @@ const cssQuizData = [
     b: "font-weight",
     c: "text-decoration",
     d: "text-transform",
-    ans: "ans-1",
+    ans: "css-ans-1",
   },
 ];
 

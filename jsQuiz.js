@@ -5,7 +5,7 @@ const jsQuizData = [
     b: "Data Object Model",
     c: "Document Order Model",
     d: "Dynamic Object Model",
-    ans: "ans-1",
+    ans: "js-ans-1",
   },
   {
     question: "Q2. Which method is used to add a new element to the end of an array?",
@@ -13,7 +13,7 @@ const jsQuizData = [
     b: "join()",
     c: "concat()",
     d: "slice()",
-    ans: "ans-1",
+    ans: "js-ans-1",
   },
   {
     question: "Q3. Which operator is used to concatenate strings in JavaScript?",
@@ -21,7 +21,7 @@ const jsQuizData = [
     b: "-",
     c: "*",
     d: "/",
-    ans: "ans-1",
+    ans: "js-ans-1",
   },
   {
     question: "Q4. What is the correct way to write an if statement in JavaScript?",
@@ -29,7 +29,7 @@ const jsQuizData = [
     b: "if x = 5",
     c: "if x == 5",
     d: "if x =! 5",
-    ans: "ans-1",
+    ans: "js-ans-1",
   },
   {
     question: "Q5. Which method is used to remove the last element from an array in JavaScript?",
@@ -37,7 +37,7 @@ const jsQuizData = [
     b: "shift()",
     c: "splice()",
     d: "slice()",
-    ans: "ans-1",
+    ans: "js-ans-1",
   },
   {
     question: "Q6. Which operator is used to assign a value to a variable in JavaScript?",
@@ -45,7 +45,7 @@ const jsQuizData = [
     b: "==",
     c: "===",
     d: "!=",
-    ans: "ans-1",
+    ans: "js-ans-1",
   },
   {
     question: "Q7. What is the result of the expression '3' + 2 in JavaScript?",
@@ -53,7 +53,7 @@ const jsQuizData = [
     b: "5",
     c: "7",
     d: "undefined",
-    ans: "ans-1",
+    ans: "js-ans-1",
   },
   {
     question: "Q8. Which keyword is used to declare a variable in JavaScript?",
@@ -61,7 +61,7 @@ const jsQuizData = [
     b: "let",
     c: "const",
     d: "int",
-    ans: "ans-1",
+    ans: "js-ans-1",
   },
   {
     question: "Q9. Which method is used to convert a string to uppercase in JavaScript?",
@@ -69,7 +69,7 @@ const jsQuizData = [
     b: "toLowerCase()",
     c: "trim()",
     d: "concat()",
-    ans: "ans-1",
+    ans: "js-ans-1",
   },
   {
     question: "Q10. Which function is used to output a message to the console in JavaScript?",
@@ -77,7 +77,7 @@ const jsQuizData = [
     b: "print()",
     c: "alert()",
     d: "message()",
-    ans: "ans-1",
+    ans: "js-ans-1",
   },
 ];
 
@@ -106,7 +106,7 @@ const loadJsQuestion = () => {
 loadJsQuestion();
 
 function getJsAnswer() {
-  let answer;
+  let answer = null;
   jsAnswers.forEach((currAns) => {
     if (currAns.checked) {
       answer = currAns.id;
@@ -120,10 +120,10 @@ const deselectAllJs = () => {
 };
 
 jsSubmit.addEventListener("click", () => {
-  const checkedAnswer = getJsAnswer();
+  const checkedJsAnswer = getJsAnswer();
 
-  if (checkedAnswer != null) {
-    if (checkedAnswer === jsQuizData[jsQuestionCount].ans) {
+  if (checkedJsAnswer != null) {
+    if (checkedJsAnswer === jsQuizData[jsQuestionCount].ans) {
       jsScore++;
     }
 
