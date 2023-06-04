@@ -233,11 +233,11 @@
                                     ];
                 
                     for (let i = 0; i < htmlSections.length; i++) {
-                    const section = htmlSections[i];
-                    const headerId = `heading${i + 1}`;
-                    const contentId = `collapse${i + 1}`;
+                    const htmlSection = htmlSections[i];
+                    const htmlHeaderId = `heading${i + 1}`;
+                    const htmlContentId = `collapse${i + 1}`;
 
-                    fetch(`learn/html/${section.contentFile}`)
+                    fetch(`learn/html/${htmlSection.contentFile}`)
                       .then(response => response.text())
                       .then(content => {
                         document.querySelector(`#${contentId} .accordion-body`).innerHTML = content;
@@ -245,22 +245,22 @@
 
                     document.write(`
                       <div class="accordion-item">
-                        <h2 class="accordion-header" id="${headerId}">
+                        <h2 class="accordion-header" id="${htmlHeaderId}">
                           <button
                             class="accordion-button collapsed"
                             type="button"
                             data-bs-toggle="collapse"
-                            data-bs-target="#${contentId}"
+                            data-bs-target="#${htmlContentId}"
                             aria-expanded="false"
-                            aria-controls="${contentId}"
+                            aria-controls="${htmlContentId}"
                           >
-                            ${section.title}
+                            ${htmlSection.title}
                           </button>
                         </h2>
                         <div
-                          id="${contentId}"
+                          id="${htmlContentId}"
                           class="accordion-collapse collapse"
-                          aria-labelledby="${headerId}"
+                          aria-labelledby="${htmlHeaderId}"
                           data-bs-parent="#accordionExample"
                         >
                           <div class="accordion-body">
@@ -418,34 +418,34 @@
                                     ];
                 
                     for (let i = 0; i < cssSections.length; i++) {
-                    const section = cssSections[i];
-                    const headerId = `heading${i + 1}`;
-                    const contentId = `collapse${i + 1}`;
+                    const cssSection = cssSections[i];
+                    const cssHeaderId = `heading${i + 1}`;
+                    const cssContentId = `collapse${i + 1}`;
 
-                    fetch(`learn/css/${section.contentFile}`)
+                    fetch(`learn/css/${cssSection.contentFile}`)
                       .then(response => response.text())
                       .then(content => {
-                        document.querySelector(`#${contentId} .accordion-body`).innerHTML = content;
+                        document.querySelector(`#${cssContentId} .accordion-body`).innerHTML = content;
                       });
 
                     document.write(`
                       <div class="accordion-item">
-                        <h2 class="accordion-header" id="${headerId}">
+                        <h2 class="accordion-header" id="${cssHeaderId}">
                           <button
                             class="accordion-button collapsed"
                             type="button"
                             data-bs-toggle="collapse"
-                            data-bs-target="#${contentId}"
+                            data-bs-target="#${cssContentId}"
                             aria-expanded="false"
-                            aria-controls="${contentId}"
+                            aria-controls="${cssContentId}"
                           >
-                            ${section.title}
+                            ${cssSection.title}
                           </button>
                         </h2>
                         <div
-                          id="${contentId}"
+                          id="${cssContentId}"
                           class="accordion-collapse collapse"
-                          aria-labelledby="${headerId}"
+                          aria-labelledby="${cssHeaderId}"
                           data-bs-parent="#accordionExample"
                         >
                           <div class="accordion-body">
@@ -603,34 +603,34 @@
                                     ];
                 
                     for (let i = 0; i < jsSections.length; i++) {
-                    const section = jsSections[i];
-                    const headerId = `heading${i + 1}`;
-                    const contentId = `collapse${i + 1}`;
+                    const jsSection = jsSections[i];
+                    const jsHeaderId = `heading${i + 1}`;
+                    const jsContentId = `collapse${i + 1}`;
 
-                    fetch(`learn/javascript/${section.contentFile}`)
+                    fetch(`learn/javascript/${jsSection.contentFile}`)
                       .then(response => response.text())
                       .then(content => {
-                        document.querySelector(`#${contentId} .accordion-body`).innerHTML = content;
+                        document.querySelector(`#${jsContentId} .accordion-body`).innerHTML = content;
                       });
 
                     document.write(`
                       <div class="accordion-item">
-                        <h2 class="accordion-header" id="${headerId}">
+                        <h2 class="accordion-header" id="${jsHeaderId}">
                           <button
                             class="accordion-button collapsed"
                             type="button"
                             data-bs-toggle="collapse"
-                            data-bs-target="#${contentId}"
+                            data-bs-target="#${jsContentId}"
                             aria-expanded="false"
-                            aria-controls="${contentId}"
+                            aria-controls="${jsContentId}"
                           >
-                            ${section.title}
+                            ${jsSection.title}
                           </button>
                         </h2>
                         <div
-                          id="${contentId}"
+                          id="${jsContentId}"
                           class="accordion-collapse collapse"
-                          aria-labelledby="${headerId}"
+                          aria-labelledby="${jsHeaderId}"
                           data-bs-parent="#accordionExample"
                         >
                           <div class="accordion-body">
