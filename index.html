@@ -240,7 +240,7 @@
                     fetch(`learn/html/${htmlSection.contentFile}`)
                       .then(response => response.text())
                       .then(content => {
-                        document.querySelector(`#${contentId} .accordion-body`).innerHTML = content;
+                        document.querySelector(`#${htmlContentId} .accordion-body`).innerHTML = content;
                       });
 
                     document.write(`
