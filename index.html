@@ -161,7 +161,7 @@
               class="btn btn-primary"
               type="button"
               data-switcher
-              data-tab="4"
+              data-tab="html_learn_page"
             >
               <span class="btn-main-text">Learn</span>
             </button>
@@ -190,7 +190,7 @@
 
         <!-- HTML LEARN PAGE -->
 
-        <div class="page tabs" data-page="js_learn_page">
+        <div class="page tabs" data-page="html_learn_page">
           <div class="mainpage">
             <div class="main-dev">
               <div class="inner-section">
@@ -204,31 +204,31 @@
                                       },
                                       {
                                         title: "HTML Tags and Structure",
-                                        contentFile: "data-variables.html"
+                                        contentFile: "tags-structure.html"
                                       },
                                       {
                                         title: "Working with Text and Headings in HTML",
-                                        contentFile: "operators-expressions.html"
+                                        contentFile: "text-headings.html"
                                       },
                                       {
                                         title: "Creating Lists and Tables in HTML",
-                                        contentFile: "control-loops.html"
+                                        contentFile: "lists-tables.html"
                                       },
                                       {
                                         title: "Formatting and Styling HTML with CSS",
-                                        contentFile: "functions.html"
+                                        contentFile: "formatting.html"
                                       },
                                       {
                                         title: "Adding Images and Links in HTML",
-                                        contentFile: "arrays_objects.html"
+                                        contentFile: "images-links.html"
                                       },
                                       {
                                         title: "Understanding Forms and Input Fields in HTML",
-                                        contentFile: "dom_manipulation.html"
+                                        contentFile: "forms_inputs.html"
                                       },
                                       {
                                         title: "HTML Semantics and Accessibility",
-                                        contentFile: "css_js.html"
+                                        contentFile: "semantics-accessibility.html"
                                       }
                                     ];
                 
@@ -237,7 +237,7 @@
                     const headerId = `heading${i + 1}`;
                     const contentId = `collapse${i + 1}`;
 
-                    fetch(`learn/javascript/${section.contentFile}`)
+                    fetch(`learn/html/${section.contentFile}`)
                       .then(response => response.text())
                       .then(content => {
                         document.querySelector(`#${contentId} .accordion-body`).innerHTML = content;
@@ -346,7 +346,7 @@
               class="btn btn-primary"
               type="button"
               data-switcher
-              data-tab="7"
+              data-tab="css_learn_page"
             >
               <span class="btn-main-text">Learn</span>
             </button>
@@ -375,7 +375,7 @@
 
         <!-- CSS LEARN PAGE -->
 
-        <div class="page tabs" data-page="js_learn_page">
+        <div class="page tabs" data-page="css_learn_page">
           <div class="mainpage">
             <div class="main-dev">
               <div class="inner-section">
@@ -389,31 +389,31 @@
                                       },
                                       {
                                         title: "CSS Selectors and Styling Basics",
-                                        contentFile: "data-variables.html"
+                                        contentFile: "selectors-styling.html"
                                       },
                                       {
                                         title: "Working with Text and Fonts in CSS",
-                                        contentFile: "operators-expressions.html"
+                                        contentFile: "text.html"
                                       },
                                       {
                                         title: "Managing Colors and Backgrounds with CSS",
-                                        contentFile: "control-loops.html"
+                                        contentFile: "colors.html"
                                       },
                                       {
                                         title: "Box Model and Layout in CSS",
-                                        contentFile: "functions.html"
+                                        contentFile: "box-layout.html"
                                       },
                                       {
                                         title: "CSS Flexbox and Grid Systems",
-                                        contentFile: "arrays_objects.html"
+                                        contentFile: "flexbox-grid.html"
                                       },
                                       {
                                         title: "CSS Transitions and Animations",
-                                        contentFile: "dom_manipulation.html"
+                                        contentFile: "transitions-animations.html"
                                       },
                                       {
                                         title: "Responsive Design and Media Queries in CSS",
-                                        contentFile: "css_js.html"
+                                        contentFile: "responesive-design.html"
                                       }
                                     ];
                 
