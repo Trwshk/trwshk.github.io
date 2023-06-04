@@ -196,7 +196,7 @@
               <div class="inner-section">
                 <div class="accordion" id="accordionExample">
 
-                  <!-- <script>
+                  <script>
                     const htmlSections = [
                                       {
                                         title: "Introduction to HTML",
@@ -240,7 +240,7 @@
                     fetch(`learn/html/${htmlSection.contentFile}`)
                       .then(response => response.text())
                       .then(content => {
-                        document.querySelector(`#${htmlContentId} .accordion-body`).innerHTML = content;
+                        document.querySelector(`#${htmlContentId} .accordion-html`).innerHTML = content;
                       });
 
                     document.write(`
@@ -263,14 +263,14 @@
                           aria-labelledby="${htmlHeaderId}"
                           data-bs-parent="#accordionExample"
                         >
-                          <div class="accordion-body">
+                          <div class="accordion-body accordion-html">
                             Loading...
                           </div>
                         </div>
                       </div>
                     `);
                   }
-                  </script> -->
+                  </script>
                 
                 </div>
               </div>
@@ -425,7 +425,7 @@
                     fetch(`learn/css/${cssSection.contentFile}`)
                       .then(response => response.text())
                       .then(content => {
-                        document.querySelector(`#${cssContentId} .accordion-body`).innerHTML = content;
+                        document.querySelector(`#${cssContentId} .accordion-css`).innerHTML = content;
                       });
 
                     document.write(`
@@ -448,7 +448,7 @@
                           aria-labelledby="${cssHeaderId}"
                           data-bs-parent="#accordionExample"
                         >
-                          <div class="accordion-body">
+                          <div class="accordion-body accordion-css">
                             Loading...
                           </div>
                         </div>
@@ -610,7 +610,7 @@
                     fetch(`learn/javascript/${jsSection.contentFile}`)
                       .then(response => response.text())
                       .then(content => {
-                        document.querySelector(`#${jsContentId} .accordion-body`).innerHTML = content;
+                        document.querySelector(`#${jsContentId} .accordion-js`).innerHTML = content;
                       });
 
                     document.write(`
@@ -633,7 +633,7 @@
                           aria-labelledby="${jsHeaderId}"
                           data-bs-parent="#accordionExample"
                         >
-                          <div class="accordion-body">
+                          <div class="accordion-body accordion-js">
                             Loading...
                           </div>
                         </div>
