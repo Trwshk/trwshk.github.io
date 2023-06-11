@@ -96,7 +96,7 @@
                   const faqHeaderId = `heading${i + 1}`;
                   const faqContentId = `collapse${i + 1}`;
 
-                  fetch(`learn/html/${faqSection.contentFile}`)
+                  fetch(`faq/${faqSection.contentFile}`)
                     .then((response) => response.text())
                     .then((content) => {
                       document.querySelector(
@@ -642,7 +642,7 @@
                 <script>
                   const jsSections = [
                     {
-                      title: "Introduction to JavaScript!!!",
+                      title: "Introduction to JavaScript",
                       contentFile: "intro.html",
                     },
                     {
