@@ -1,86 +1,43 @@
-const js_exercises = [
-  {
-    text: 'Create a hyperlink:<br> &lt;a ______="https://example.com"&gt;Link&lt;/a&gt;',
-    answer: 'href'
-  },
-  {
-    text: 'Change the font size to 16 pixels:<br> element.______ = "16px";',
-    answer: 'style.fontSize'
-  },
-  {
-    text: 'Concatenate two strings:<br> var result = string1 + ______;',
-    answer: 'string2'
-  },
-  {
-    text: 'Display the current date:<br> ______.innerHTML = Date();',
-    answer: 'document.getElementById("date")'
-  },
-  {
-    text: 'Create a function named "myFunction":<br> function ______() { ... }',
-    answer: 'myFunction'
-  },
-  {
-    text: 'Add an event listener to a button:<br> button.______(\'click\', myFunction);',
-    answer: 'addEventListener'
-  },
-  {
-    text: 'Retrieve the value of an input field:<br> var value = input.______;',
-    answer: 'value'
-  },
-  {
-    text: 'Check if a variable is an array:<br> if (Array.______(myArray)) { ... }',
-    answer: 'isArray'
-  },
-  {
-    text: 'Sort an array in ascending order:<br> myArray.______();',
-    answer: 'sort'
-  },
-  {
-    text: 'Create a regular expression:<br> var regex = /______/;',
-    answer: 'pattern'
-  }
-];
-
 const html_exercises = [
   {
-    text: 'Declare a variable named "count":<br> var ______;',
-    answer: 'count'
+    text: 'Create a heading 1 element with "text" as content:<br> ______',
+    answer: '<h1>text</h1>'
   },
   {
-    text: 'Display "Hello, World!" in the console:<br> console.______(\'Hello, World!\');',
-    answer: 'log'
+    text: 'Create a paragraph element with "more text" as content:<br> ______',
+    answer: '<p>more text</p>'
   },
   {
-    text: 'Add 1 to a variable named "x":<br> ______++;',
-    answer: 'x'
+    text: 'Create a link element with content "link" that links to "#":<br> ______',
+    answer: '<a href="#">link</a>'
   },
   {
-    text: 'Prompt the user for input:<br> ______(\'Enter your name:\');',
-    answer: 'prompt'
+    text: 'Create an image element.<br> The source is "img.jpg", the alternate is "image":<br>______',
+    answer: '<img src="img.jpg" alt="image">'
   },
   {
-    text: 'Create an array:<br> var myArray = [______];',
-    answer: 'element1, element2, ...'
+    text: 'Create a button element with "click" as content:<br>______',
+    answer: '<button>click</button>'
   },
   {
-    text: 'Access the first element of an array named "myArray":<br> var firstElement = myArray[______];',
-    answer: '0'
+    text: 'Create a line break:<br>______',
+    answer: '<br>'
   },
   {
-    text: 'Define a function named "myFunction":<br> function ______() { ... }',
-    answer: 'myFunction'
+    text: 'Create an ordered list with "a" and "b" as list items:<br>______',
+    answer: '<ol><li>a</li><li>b</li></ol>'
   },
   {
-    text: 'Check if a variable is equal to a specific value:<br> if (variable === ______) { ... }',
-    answer: 'value'
+    text: 'Create an input element of type text:<br>______',
+    answer: '<input type="text">'
   },
   {
-    text: 'Create a for loop that iterates from 1 to 10:<br> for (var i = 1; i <= ______; i++) { ... }',
-    answer: '10'
+    text: 'Create a checkbox input element:<br>______',
+    answer: '<input type="checkbox">'
   },
   {
-    text: 'Remove an item from an array at a specific index:<br> myArray.______(index, 1);',
-    answer: 'splice'
+    text: 'Create a textarea element:<br>______',
+    answer: '<textarea></textarea>'
   }
 ];
 
@@ -127,13 +84,58 @@ const css_exercises = [
   }
 ];
 
+const js_exercises = [
+  {
+    text: 'Create a hyperlink:<br> &lt;a ______="https://example.com"&gt;Link&lt;/a&gt;',
+    answer: 'href'
+  },
+  {
+    text: 'Change the font size to 16 pixels:<br> element.______ = "16px";',
+    answer: 'style.fontSize'
+  },
+  {
+    text: 'Concatenate two strings:<br> var result = string1 + ______;',
+    answer: 'string2'
+  },
+  {
+    text: 'Display the current date:<br> ______.innerHTML = Date();',
+    answer: 'document.getElementById("date")'
+  },
+  {
+    text: 'Create a function named "myFunction":<br> function ______() { ... }',
+    answer: 'myFunction'
+  },
+  {
+    text: 'Add an event listener to a button:<br> button.______(\'click\', myFunction);',
+    answer: 'addEventListener'
+  },
+  {
+    text: 'Retrieve the value of an input field:<br> var value = input.______;',
+    answer: 'value'
+  },
+  {
+    text: 'Check if a variable is an array:<br> if (Array.______(myArray)) { ... }',
+    answer: 'isArray'
+  },
+  {
+    text: 'Sort an array in ascending order:<br> myArray.______();',
+    answer: 'sort'
+  },
+  {
+    text: 'Create a regular expression:<br> var regex = /______/;',
+    answer: 'pattern'
+  }
+];
+
+
 const correctMessage = "Correct!";
 const incorrectMessage = "Incorrect. Please try again.";
 
 let exerciseIndex = 0;
 
 function generateExerciseHtml(exercise) {
-  const inputWidth = (exercise.answer.length * 15) + "px";
+  const minWidth = 50; 
+  const inputWidth = Math.max(exercise.answer.length * 15, minWidth) + "px";
   return `
 <div>
   <div>

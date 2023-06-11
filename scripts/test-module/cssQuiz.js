@@ -1,6 +1,6 @@
 const cssQuizData = [
   {
-    question: "Q1. What does CSS stand for?",
+    question: "What does CSS stand for?",
     a: "Cascading Style Sheets",
     b: "Colorful Style Sheets",
     c: "Computer Style Sheets",
@@ -8,7 +8,7 @@ const cssQuizData = [
     ans: "css-ans-1",
   },
   {
-    question: "Q2. Which property is used to change the font color of an element?",
+    question: "Which property is used to change the font color of an element?",
     a: "background-color",
     b: "color",
     c: "font-size",
@@ -16,7 +16,7 @@ const cssQuizData = [
     ans: "css-ans-2",
   },
   {
-    question: "Q3. Which property is used to add spacing between letters?",
+    question: "Which property is used to add spacing between letters?",
     a: "margin",
     b: "padding",
     c: "line-height",
@@ -24,7 +24,7 @@ const cssQuizData = [
     ans: "css-ans-4",
   },
   {
-    question: "Q4. Which property is used to make an element's text bold?",
+    question: "Which property is used to make an element's text bold?",
     a: "font-style",
     b: "font-weight",
     c: "text-decoration",
@@ -32,7 +32,7 @@ const cssQuizData = [
     ans: "css-ans-2",
   },
   {
-    question: "Q5. Which property is used to control the transparency of an element?",
+    question: "Which property is used to control the transparency of an element?",
     a: "opacity",
     b: "visibility",
     c: "display",
@@ -40,7 +40,7 @@ const cssQuizData = [
     ans: "css-ans-1",
   },
   {
-    question: "Q6. Which property is used to align text horizontally?",
+    question: "Which property is used to align text horizontally?",
     a: "text-align",
     b: "text-decoration",
     c: "text-transform",
@@ -48,7 +48,7 @@ const cssQuizData = [
     ans: "css-ans-1",
   },
   {
-    question: "Q7. Which property is used to add a border to an element?",
+    question: "Which property is used to add a border to an element?",
     a: "border-color",
     b: "border-style",
     c: "border-width",
@@ -56,7 +56,7 @@ const cssQuizData = [
     ans: "css-ans-4",
   },
   {
-    question: "Q8. Which property is used to control the spacing between lines of text?",
+    question: "Which property is used to control the spacing between lines of text?",
     a: "line-height",
     b: "margin",
     c: "padding",
@@ -64,7 +64,7 @@ const cssQuizData = [
     ans: "css-ans-1",
   },
   {
-    question: "Q9. Which property is used to control the order of elements in a flex container?",
+    question: "Which property is used to control the order of elements in a flex container?",
     a: "justify-content",
     b: "align-items",
     c: "order",
@@ -72,7 +72,7 @@ const cssQuizData = [
     ans: "css-ans-3",
   },
   {
-    question: "Q10. Which property is used to make an element's text italic?",
+    question: "Which property is used to make an element's text italic?",
     a: "font-style",
     b: "font-weight",
     c: "text-decoration",

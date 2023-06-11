@@ -19,3 +19,14 @@ function SwitchPage (page_id) {
   const next_page = document.querySelector(`.pages .page[data-page="${page_id}"]`)
   next_page.classList.add("is-active");
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  var navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(function(navLink) {
+    navLink.addEventListener('click', function() {
+      var offcanvasElement = document.getElementById('offcanvasNavbar');
+      var offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+      offcanvas.hide();
+    });
+  });
+});

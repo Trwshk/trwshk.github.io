@@ -1,6 +1,6 @@
 const jsQuizData = [
   {
-    question: "Q1. What does DOM stand for?",
+    question: "What does DOM stand for?",
     a: "Document Object Model",
     b: "Data Object Model",
     c: "Document Order Model",
@@ -8,7 +8,7 @@ const jsQuizData = [
     ans: "js-ans-1",
   },
   {
-    question: "Q2. Which method is used to add a new element to the end of an array?",
+    question: "Which method is used to add a new element to the end of an array?",
     a: "push()",
     b: "join()",
     c: "concat()",
@@ -16,7 +16,7 @@ const jsQuizData = [
     ans: "js-ans-1",
   },
   {
-    question: "Q3. Which operator is used to concatenate strings in JavaScript?",
+    question: "Which operator is used to concatenate strings in JavaScript?",
     a: "+",
     b: "-",
     c: "*",
@@ -24,7 +24,7 @@ const jsQuizData = [
     ans: "js-ans-1",
   },
   {
-    question: "Q4. What is the correct way to write an if statement in JavaScript?",
+    question: "What is the correct way to write an if statement in JavaScript?",
     a: "if (x === 5)",
     b: "if x = 5",
     c: "if x == 5",
@@ -32,7 +32,7 @@ const jsQuizData = [
     ans: "js-ans-1",
   },
   {
-    question: "Q5. Which method is used to remove the last element from an array in JavaScript?",
+    question: "Which method is used to remove the last element from an array in JavaScript?",
     a: "pop()",
     b: "shift()",
     c: "splice()",
@@ -40,7 +40,7 @@ const jsQuizData = [
     ans: "js-ans-1",
   },
   {
-    question: "Q6. Which operator is used to assign a value to a variable in JavaScript?",
+    question: "Which operator is used to assign a value to a variable in JavaScript?",
     a: "=",
     b: "==",
     c: "===",
@@ -48,7 +48,7 @@ const jsQuizData = [
     ans: "js-ans-1",
   },
   {
-    question: "Q7. What is the result of the expression '3' + 2 in JavaScript?",
+    question: "What is the result of the expression '3' + 2 in JavaScript?",
     a: "32",
     b: "5",
     c: "7",
@@ -56,7 +56,7 @@ const jsQuizData = [
     ans: "js-ans-1",
   },
   {
-    question: "Q8. Which keyword is used to declare a variable in JavaScript?",
+    question: "Which keyword is used to declare a variable in JavaScript?",
     a: "var",
     b: "let",
     c: "const",
@@ -64,7 +64,7 @@ const jsQuizData = [
     ans: "js-ans-1",
   },
   {
-    question: "Q9. Which method is used to convert a string to uppercase in JavaScript?",
+    question: "Which method is used to convert a string to uppercase in JavaScript?",
     a: "toUpperCase()",
     b: "toLowerCase()",
     c: "trim()",
@@ -72,7 +72,7 @@ const jsQuizData = [
     ans: "js-ans-1",
   },
   {
-    question: "Q10. Which function is used to output a message to the console in JavaScript?",
+    question: "Which function is used to output a message to the console in JavaScript?",
     a: "log()",
     b: "print()",
     c: "alert()",

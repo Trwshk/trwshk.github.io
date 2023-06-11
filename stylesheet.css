@@ -100,3 +100,8 @@
   'GRAD' 0,
   'opsz' 48
 }
+
+.btn-check:checked+.btn {
+  background-color: #438eff !important;
+  border-color: #438eff !important;
+}
